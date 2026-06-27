@@ -173,7 +173,24 @@ Le Company Admin gère sa propre compagnie via `/admin`. Accès protégé par `r
 
 ---
 
-## Wizard de configuration initial (`/admin/setup`)
+## Page d'auto-inscription publique (`/onboarding`)
+
+Wizard 6 étapes accessible sans authentification pour les compagnies souhaitant rejoindre la plateforme.
+
+| Étape | Contenu |
+|-------|---------|
+| 1 | Informations générales (nom, type bus/bateau, description) |
+| 2 | Coordonnées (email, téléphone, adresse) |
+| 3 | Identité légale (raison sociale, NIF, logo) |
+| 4 | Documents KYB (NIF, Patente, Assurance RC) |
+| 5 | Coordonnées bancaires (Mobile Money ou virement) |
+| 6 | Récapitulatif + acceptation des CGV + soumission |
+
+**À la soumission :** RPC `submit_company_onboarding` → email d'invitation + notification super admin.
+
+---
+
+## Wizard de configuration post-inscription (`/admin/setup`)
 
 Affiché après la première connexion, avant d'accéder au dashboard principal.
 

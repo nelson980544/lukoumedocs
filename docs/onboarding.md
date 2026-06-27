@@ -7,7 +7,9 @@ Ces routes gèrent l'inscription en libre-service des compagnies, la gestion des
 ## Flux général
 
 ```
-/apply → [Email A: demande reçue + invitation]
+/onboarding (6 étapes) → RPC submit_company_onboarding
+                        → [Email: invitation avec lien signup]
+                        → [Notification super admin]
        → /admin/signup?token=xxx
        → Signature du contrat (OTP)
        → /admin/setup (4 étapes : lieux → équipe → KYB → attente)
@@ -19,11 +21,13 @@ Ces routes gèrent l'inscription en libre-service des compagnies, la gestion des
 Super admin rejette → [Email D: rejet avec raison]
 ```
 
+> **Note :** La page d'auto-inscription publique est `/onboarding` (`app/(backoffice)/onboarding/`), un wizard 6 étapes qui appelle la RPC Supabase `submit_company_onboarding` et les routes `/api/onboarding/notify` et `/api/onboarding/invite`. La route `/api/companies/apply` est un endpoint alternatif REST disponible mais non utilisé par le flux principal.
+
 ---
 
 ## `POST /api/companies/apply`
 
-Crée une compagnie en auto-inscription depuis la page publique `/apply`. Génère le token d'invitation et déclenche les emails de bienvenue.
+Endpoint alternatif d'auto-inscription. Crée une compagnie, génère le token d'invitation et déclenche les emails. Le flux principal passe par `/onboarding` + RPC `submit_company_onboarding`.
 
 ### Authentification
 Aucune — route publique.
