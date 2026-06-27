@@ -8,6 +8,7 @@ Documentation complète des **45 routes API** et des interfaces admin de la plat
 |--------|-------------|--------|
 | [🛡️ Super Admin & Company Admin](./docs/superadmin.md) | Dashboards, onboarding, modules, signature contrat | — |
 | [📇 CRM interne Lukoumé](./docs/crm.md) | Prospection & suivi des compagnies clientes (réservé super_admin) | — |
+| [📐 CRM — Référence schéma](./docs/crm-schema.md) | Détail colonne par colonne des tables `crm_*` | — |
 | [👤 Agents & Administrateurs](./docs/admin.md) | Création et gestion des comptes agents/conducteurs | 3 |
 | [🏢 Onboarding & E-Signature](./docs/onboarding.md) | Auto-inscription, KYB, OTP, contrat électronique | 8 |
 | [💳 Paiements](./docs/paiements.md) | Stripe, SingPay, E-Billing (Airtel/Moov), Lygos | 7 |

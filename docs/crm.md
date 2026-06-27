@@ -46,6 +46,8 @@ Migration **`061_crm_module.sql`**. Toutes les tables sont préfixées **`crm_`*
 collision avec la table plateforme `companies`. Conventions réutilisées :
 `public.is_super_admin()` (mig. 001) et `public.update_updated_at_column()` (mig. 031).
 
+> 📐 **Référence exhaustive colonne par colonne** : voir [crm-schema.md](./crm-schema.md).
+
 | Table | Rôle |
 |-------|------|
 | `crm_pipeline` | Pipelines commerciaux (`name`, `code`, `is_default`, `position`) |
