@@ -1,12 +1,14 @@
-# 🚢 Documentation API — Lukoumé / TripGabon
+# 🚢 Documentation — Lukoumé / TripGabon
 
-Documentation complète des **37 routes API** de la plateforme TripGabon Admin, le système de billetterie et de gestion des transports maritimes au Gabon.
+Documentation complète des **45 routes API** et des interfaces admin de la plateforme TripGabon.
 
 ## 🗂️ Table des matières
 
 | Module | Description | Routes |
 |--------|-------------|--------|
-| [👤 Admin & Agents](./docs/admin.md) | Création et gestion des comptes agents/conducteurs | 3 |
+| [🛡️ Super Admin & Company Admin](./docs/superadmin.md) | Dashboards, onboarding, modules, signature contrat | — |
+| [👤 Agents & Administrateurs](./docs/admin.md) | Création et gestion des comptes agents/conducteurs | 3 |
+| [🏢 Onboarding & E-Signature](./docs/onboarding.md) | Auto-inscription, KYB, OTP, contrat électronique | 8 |
 | [💳 Paiements](./docs/paiements.md) | Stripe, SingPay, E-Billing (Airtel/Moov), Lygos | 7 |
 | [📬 Notifications](./docs/notifications.md) | Emails, Telegram, WhatsApp, Support | 10 |
 | [🎟️ Billetterie](./docs/billetterie.md) | Signature et vérification QR codes | 3 |
@@ -141,4 +143,4 @@ Provider → POST /api/<provider>/callback  [webhook sécurisé]
 
 ---
 
-*Maintenu par l'équipe TripGabon · Dernière mise à jour : Juin 2026*
+*Maintenu par l'équipe TripGabon · Dernière mise à jour : 27 Juin 2026*
